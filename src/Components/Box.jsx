@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import "./box.css"
+import TodoItem from './TodoItem';
 
 
 
@@ -49,10 +50,12 @@ function Box() {
         </div>
         <div>
             <ul>
-                {item.map((todoItem)=>{
-                    return <li>{todoItem}</li>
-
-                })}
+                {item.map(todoItem=>(
+                    <TodoItem 
+                    text= {todoItem}
+                    
+                    />
+                ))}
             </ul>
         </div>
       
